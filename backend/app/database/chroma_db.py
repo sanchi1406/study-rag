@@ -53,3 +53,14 @@ def search_embeddings(
 
 def get_all_documents():
     return collection.get()
+
+
+def clear_collection():
+    """
+    Remove all documents from the collection.
+    """
+
+    data = collection.get()
+
+    if data["ids"]:
+        collection.delete(ids=data["ids"])
