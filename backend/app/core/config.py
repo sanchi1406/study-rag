@@ -21,7 +21,7 @@ class Settings(BaseSettings):
 
     # Upload Folder
     UPLOAD_DIR: str
-
+    USE_RERANKER: bool = False
     # Chunking
     CHUNK_SIZE: int
     CHUNK_OVERLAP: int
